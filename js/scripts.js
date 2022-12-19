@@ -12,9 +12,15 @@ const prezzoAlChilomentro = 0.21;
 const prezzoFinale = chilometri * prezzoAlChilomentro;
 document.getElementById("result").innerHTML = prezzoFinale + "€"; 
 
-const prezzoUnder_18 = prezzoFinale / 100 * 20 ;
+const scontoUnder_18 = prezzoFinale  / 100 * 20 ;
 
-const prezzoOver_65 = prezzoFinale / 100 * 40 ;
+const scontoOver_65 = prezzoFinale / 100 * 40 ;
+
+const prezzoUnder_18 = scontoUnder_18 - prezzoFinale ;
+
+const prezzoOver_65 =  scontoOver_65 - prezzoFinale;
+
+
 
 
 if (età < 18) {
